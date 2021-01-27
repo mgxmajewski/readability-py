@@ -12,10 +12,18 @@ def lettersCount():
            letters += 1
     return letters
     
-# Counts words
+# Count words
 def wordsCount():
     words = 0
     for i in range(textLentgh):
         if (givenText[i] == " "):
             words+= 1
     return words + 1
+
+# Count sentences
+def sentencesCount():
+    sentences = 0
+    for i in range (textLentgh):
+        if (givenText[i] == "." or givenText[i] == "!" or  givenText[i] == "?"):
+            sentences+=1
+    return sentences
