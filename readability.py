@@ -32,3 +32,11 @@ def sentencesCount():
 def indexColemanLiau():
     index = 0.0588 * (lettersCount() / wordsCount() * 100) - 0.296 * (sentencesCount() / wordsCount() * 100) - 15.8
     return index
+    
+# Display result refferenced to Grade
+if indexColemanLiau() < 1:
+    print("Before Grade 1")
+elif indexColemanLiau() > 16:
+    print("Grade 16+")
+else:
+    print("Grade " + str(round(indexColemanLiau())))
