@@ -27,3 +27,8 @@ def sentencesCount():
         if (givenText[i] == "." or givenText[i] == "!" or  givenText[i] == "?"):
             sentences+=1
     return sentences
+    
+# Compute Cole Liau index
+def indexColemanLiau():
+    index = 0.0588 * (lettersCount() / wordsCount() * 100) - 0.296 * (sentencesCount() / wordsCount() * 100) - 15.8
+    return index
