@@ -28,9 +28,15 @@ def sentencesCount():
             sentences+=1
     return sentences
     
+# Calling functions to compute index
+letters = lettersCount()
+words = wordsCount()
+sentences = sentencesCount()
+
+    
 # Compute Cole Liau index
 def indexColemanLiau():
-    index = 0.0588 * (lettersCount() / wordsCount() * 100) - 0.296 * (sentencesCount() / wordsCount() * 100) - 15.8
+    index = 0.0588 * (letters / words * 100) - 0.296 * (sentences / words * 100) - 15.8
     return index
     
 # Display result refferenced to Grade
